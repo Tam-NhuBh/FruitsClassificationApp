@@ -6,11 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView imgSignout;
+    ImageView imgSignout, imgManage;
+    TextView tvEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +23,17 @@ public class MainActivity extends AppCompatActivity {
 //        setContentView(R.layout.layout_listdishes);
 //        setContentView(R.layout.activity_main);
 
+
+
         imgSignout = findViewById(R.id.imgLogout);
+        imgManage = findViewById(R.id.imgManage);
+        tvEmail = findViewById(R.id.tv_Email);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(!user.getEmail().contains("@admin.com"))
+        {
+            imgManage.setVisibility(View.GONE);
+        }
+        tvEmail.setText(user.getEmail());
         imgSignout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
