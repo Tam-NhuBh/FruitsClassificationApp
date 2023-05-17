@@ -16,7 +16,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import hcmute.edu.vn.fruitsclassificationapp.activities.ClassifyActivity;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView imgSignout;
     ImageView camera, choose, recommend;
     ImageView imageView;
     TextView result;
@@ -27,16 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        imgSignout = findViewById(R.id.imgLogout);
-        imgSignout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Login.class);
-                startActivity(intent);
-                FirebaseAuth.getInstance().signOut();
-                finish();
-            }
-        });
+
 
         camera = findViewById(R.id.takePicture);
         choose = findViewById(R.id.choosePicture);

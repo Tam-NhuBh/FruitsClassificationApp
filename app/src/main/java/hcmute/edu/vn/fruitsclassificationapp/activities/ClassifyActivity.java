@@ -17,6 +17,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 
@@ -24,11 +26,12 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
+import hcmute.edu.vn.fruitsclassificationapp.Login;
 import hcmute.edu.vn.fruitsclassificationapp.ml.Model;
 import hcmute.edu.vn.fruitsclassificationapp.R;
 
 public class ClassifyActivity extends AppCompatActivity {
-    ImageView camera, choose;
+    ImageView camera, choose, imgSignout;
     ImageView imageView;
     TextView result;
     int imageSize = 32;
@@ -40,7 +43,7 @@ public class ClassifyActivity extends AppCompatActivity {
 
         camera = findViewById(R.id.takePicture);
         choose = findViewById(R.id.choosePicture);
-
+        imgSignout = findViewById(R.id.imgLogout);
         result = findViewById(R.id.result);
         imageView = findViewById(R.id.imageView);
 
@@ -60,6 +63,15 @@ public class ClassifyActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent cameraIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(cameraIntent, 1);
+            }
+        });
+        imgSignout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+                FirebaseAuth.getInstance().signOut();
+                finish();
             }
         });
     }

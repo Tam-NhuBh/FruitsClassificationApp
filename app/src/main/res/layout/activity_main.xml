@@ -44,14 +44,6 @@
 
     <include layout="@layout/layout_main" />
 
-    <ImageView
-        android:id="@+id/imgLogout"
-        android:layout_width="27dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="380dp"
-        android:layout_marginTop="8dp"
-
-        android:src="@drawable/outline_logout_black_48" />
 
 </RelativeLayout>
 
