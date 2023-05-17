@@ -25,35 +25,33 @@
                     android:orientation="vertical">
 
 
-</RelativeLayout>
-
                     <ImageView
                         style="@style/parent"
                         android:layout_width="match_parent"
-                        android:layout_height="228dp"
+                        android:layout_height="258dp"
                         android:background="@drawable/ic_login_bk"
                         android:contentDescription="login background" />
-                    <ImageView
-                        android:id="@+id/imgLogout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/outline_logout_black_48" />
+
 
                 </LinearLayout>
 
             </LinearLayout>
+
 
         </RelativeLayout>
 
     </ScrollView>
 
     <include layout="@layout/layout_main" />
+
+    <ImageView
+        android:id="@+id/imgLogout"
+        android:layout_width="27dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="380dp"
+        android:layout_marginTop="8dp"
+
+        android:src="@drawable/outline_logout_black_48" />
+
 </RelativeLayout>
 
