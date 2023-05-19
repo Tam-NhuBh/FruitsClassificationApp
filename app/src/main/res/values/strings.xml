@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">FruitsClassificationApp</string>
-    <string name="signup">SIGN UP</string>
-    <string name="signin">SIGN IN</string>
+    <string name="signup">ĐĂNG KÍ</string>
+    <string name="signin">ĐĂNG NHẬP</string>
     <string name="login_email_hint">Email</string>
-    <string name="login_password_hint">Password</string>
-    <string name="signup_login_hint">Already have an account? Sign In</string>
-    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="login_password_hint">Mật khẩu</string>
+    <string name="signup_login_hint">Bạn đã có tài khoản? Đăng nhập</string>
+    <string name="login_signup_hint">Bạn KHÔNG có tài khoản? Đăng kí</string>
+    <string name="user">Người dùng</string>
+    <string name="admin">Quản trị viên</string>
+    <string name="forgot">Quên mật khẩu?</string>
+    <string name="msg_email_require">Vui lòng nhập địa chỉ email</string>
+    <string name="msg_password_require">Vui lòng nhập mật khẩu</string>
+    <string name="msg_email_invalid">Email không hợp lệ, vui lòng nhập lại</string>
+    <string name="msg_email_invalid_admin">Email dành cho quản trị viên cần có định dạng …@admin.com</string>
+    <string name="msg_email_invalid_user">Email sai định dạng dành cho người dùng</string>
+    <string name="msg_sign_up_error">Đăng ký không thành công, vui lòng thử lại</string>
+    <string name="msg_sign_in_error">Đăng nhập không thành công, vui lòng thử lại</string>
 </resources>
