@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
@@ -31,9 +32,11 @@ import hcmute.edu.vn.fruitsclassificationapp.ml.Model;
 import hcmute.edu.vn.fruitsclassificationapp.R;
 
 public class ClassifyActivity extends AppCompatActivity {
-    ImageView camera, choose, imgSignout;
+    ImageView camera, choose, imgSignout, imgManage;
     ImageView imageView;
     TextView result;
+    TextView tvEmail;
+
     int imageSize = 32;
 
     @Override
@@ -65,6 +68,14 @@ public class ClassifyActivity extends AppCompatActivity {
                 startActivityForResult(cameraIntent, 1);
             }
         });
+        imgManage = findViewById(R.id.imgManage);
+        tvEmail = findViewById(R.id.tv_Email);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(!user.getEmail().contains("@admin.com"))
+        {
+            imgManage.setVisibility(View.GONE);
+        }
+        tvEmail.setText(user.getEmail());
         imgSignout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

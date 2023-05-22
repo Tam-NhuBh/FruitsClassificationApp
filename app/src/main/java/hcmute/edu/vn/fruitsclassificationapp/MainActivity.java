@@ -18,11 +18,11 @@ import com.google.firebase.auth.FirebaseUser;
 import hcmute.edu.vn.fruitsclassificationapp.activities.ClassifyActivity;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView camera, choose, recommend;
+    ImageView camera, choose, recommend, imgManage;
     ImageView imageView;
     TextView result;
 
-    ImageView imgSignout, imgManage;
+    ImageView imgSignout;
     TextView tvEmail;
   
     @Override

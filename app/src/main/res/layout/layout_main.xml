@@ -7,16 +7,27 @@
     tools:context=".activities.ClassifyActivity">
 
     <ImageView
-        android:id="@+id/takePicture"
+        android:id="@+id/choosePicture"
         style="@style/Widget.Material3.Button.Icon"
-        android:layout_width="114dp"
-        android:layout_height="84dp"
-        android:layout_below="@id/result"
+        android:layout_width="130dp"
+        android:layout_height="83dp"
+        android:layout_below="@id/takePicture"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="144dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="134dp"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
+        app:srcCompat="@drawable/choose" />
+
+    <ImageView
+        android:id="@+id/takePicture"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="164dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/result"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="182dp"
         android:foregroundGravity="center_vertical|center|center_horizontal"
         app:srcCompat="@drawable/camera" />
 
@@ -24,35 +35,22 @@
         android:id="@+id/recommend"
         style="@style/Widget.Material3.Button.Icon"
         android:layout_width="122dp"
-        android:layout_height="81dp"
+        android:layout_height="89dp"
         android:layout_below="@id/choosePicture"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="139dp"
+        android:layout_marginTop="-167dp"
+        android:layout_marginEnd="76dp"
         android:foregroundGravity="center_vertical|center|center_horizontal"
         app:srcCompat="@drawable/recommend" />
 
     <ImageView
-        android:id="@+id/choosePicture"
-        style="@style/Widget.Material3.Button.Icon"
-        android:layout_width="122dp"
-        android:layout_height="81dp"
-        android:layout_below="@id/takePicture"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="139dp"
-        android:foregroundGravity="center_vertical|center|center_horizontal"
-        app:srcCompat="@drawable/choose" />
-
-    <ImageView
         android:id="@+id/imageView"
-        android:layout_width="311dp"
-        android:layout_height="270dp"
+        android:layout_width="320dp"
+        android:layout_height="230dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tv_Email"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="3dp"
         android:background="#FFFFFF" />
 
     <TextView
