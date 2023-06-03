@@ -50,7 +50,7 @@
         <TextView
             android:id="@+id/forgotPass"
             style="@style/viewParent"
-            android:text="Quên mật khẩu?"
+            android:text="@string/forgot"
             android:textColor="@color/primaryTextColor"
             android:textSize="@dimen/newsMoreTextSize"
             android:layout_gravity="end"
