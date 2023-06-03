@@ -1,5 +1,6 @@
 package hcmute.edu.vn.fruitsclassificationapp.activities;
 
+import static android.content.ContentValues.TAG;
 import android.Manifest;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -16,7 +17,11 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+
+import android.util.Log;
+
 import android.util.Base64;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -64,12 +69,15 @@ import java.util.Locale;
 import java.util.Map;
 
 import hcmute.edu.vn.fruitsclassificationapp.Login;
+import hcmute.edu.vn.fruitsclassificationapp.RecommendActivity;
+import hcmute.edu.vn.fruitsclassificationapp.RecommendOnlyActivity;
+import hcmute.edu.vn.fruitsclassificationapp.SystemStaticVariables;
 import hcmute.edu.vn.fruitsclassificationapp.ml.Model;
 import hcmute.edu.vn.fruitsclassificationapp.R;
 
 
 public class ClassifyActivity extends AppCompatActivity {
-    ImageView camera, choose, imgSignout, imgManage, predictBtn;
+    ImageView camera, choose, imgSignout, imgManage, recommend,predictBtn;
     ImageView imageView;
     TextView result;
     TextView tvEmail;
@@ -106,6 +114,8 @@ public class ClassifyActivity extends AppCompatActivity {
         imgSignout = findViewById(R.id.imgLogout);
         result = findViewById(R.id.result);
         imageView = findViewById(R.id.imageView);
+        recommend = findViewById(R.id.recommend);
+        imgManage = findViewById(R.id.imgManage);
         predictBtn = findViewById(R.id.imgPredict);
 
         camera.setOnClickListener(new View.OnClickListener() {
@@ -190,6 +200,20 @@ public class ClassifyActivity extends AppCompatActivity {
                 finish();
             }
         });
+        recommend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View cam) {
+                startActivity(new Intent(getApplicationContext(), RecommendOnlyActivity.class));
+
+                Log.d(TAG, SystemStaticVariables.DetectedFruitName );
+            }
+        });
+        imgManage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), RecommendActivity.class));
+            }
+        });
     }
 
     void getPermission()
@@ -212,6 +236,7 @@ public class ClassifyActivity extends AppCompatActivity {
                     this.getPermission();
                 }
             }
+
         }
         super.onRequestPermissionsResult(requestCode,permissions,grantResults);
     }

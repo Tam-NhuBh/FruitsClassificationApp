@@ -1,7 +1,10 @@
 package hcmute.edu.vn.fruitsclassificationapp;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,17 +24,15 @@ public class MainActivity extends AppCompatActivity {
     ImageView camera, choose, recommend, imgManage;
     ImageView imageView;
     TextView result;
-
-    ImageView imgSignout;
+    ImageView imgSignout, imgManage;
     TextView tvEmail;
   
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, SystemStaticVariables.DetectedFruitName );
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-
 
         camera = findViewById(R.id.takePicture);
         choose = findViewById(R.id.choosePicture);
@@ -52,15 +53,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), ClassifyActivity.class);
                 startActivity(intent);
                 finish();
+                Log.d(TAG, "Clicked button choose picture" );
             }
 
         });
         recommend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View cam) {
-                Intent intent = new Intent(getApplicationContext(), ClassifyActivity.class);
-                startActivity(intent);
-                finish();
+
+                startActivity(new Intent(getApplicationContext(), RecommendOnlyActivity.class));
+                Log.d(TAG, SystemStaticVariables.DetectedFruitName );
             }
         });
 
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         if(!user.getEmail().contains("@admin.com"))
         {
             imgManage.setVisibility(View.GONE);
+
         }
         tvEmail.setText(user.getEmail());
         imgSignout.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +83,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 FirebaseAuth.getInstance().signOut();
                 finish();
+            }
+        });
+
+        imgManage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), RecommendActivity.class));
             }
         });
     }

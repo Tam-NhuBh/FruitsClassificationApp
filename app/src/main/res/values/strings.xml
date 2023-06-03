@@ -16,4 +16,5 @@
     <string name="msg_email_invalid_user">Invalid email for users</string>
     <string name="msg_sign_up_error">Registration failed, please try again!</string>
     <string name="msg_sign_in_error">Login failed, please try again!</string>
+
 </resources>
