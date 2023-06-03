@@ -7,17 +7,17 @@
     tools:context=".activities.ClassifyActivity">
 
     <ImageView
-        android:id="@+id/choosePicture"
+        android:id="@+id/recommend"
         style="@style/Widget.Material3.Button.Icon"
-        android:layout_width="130dp"
-        android:layout_height="83dp"
-        android:layout_below="@id/takePicture"
+        android:layout_width="122dp"
+        android:layout_height="89dp"
+        android:layout_below="@id/choosePicture"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="199dp"
+        android:layout_marginTop="-188dp"
+        android:layout_marginEnd="80dp"
         android:foregroundGravity="center_vertical|center|center_horizontal"
-        app:srcCompat="@drawable/choose" />
+        app:srcCompat="@drawable/recommend" />
 
     <ImageView
         android:id="@+id/takePicture"
@@ -28,46 +28,49 @@
         android:layout_alignParentEnd="true"
 
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="-81dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="182dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="176dp"
 
         android:foregroundGravity="center_vertical|center|center_horizontal"
         app:srcCompat="@drawable/camera" />
 
     <ImageView
-        android:id="@+id/recommend"
+        android:id="@+id/choosePicture"
         style="@style/Widget.Material3.Button.Icon"
-        android:layout_width="122dp"
-        android:layout_height="89dp"
-        android:layout_below="@id/choosePicture"
+        android:layout_width="130dp"
+        android:layout_height="83dp"
+        android:layout_below="@id/takePicture"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="214dp"
-
-        android:layout_marginTop="-188dp"
-        android:layout_marginEnd="82dp"
-
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="8dp"
         android:foregroundGravity="center_vertical|center|center_horizontal"
-        app:srcCompat="@drawable/recommend" />
+        app:srcCompat="@drawable/choose" />
+
+    <ImageView
+        android:id="@+id/imgPredict"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="127dp"
+        android:layout_height="91dp"
+        android:layout_below="@id/recommend"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="6dp"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
+        app:srcCompat="@android:drawable/ic_menu_help" />
 
     <ImageView
         android:id="@+id/imageView"
-
-        android:layout_width="311dp"
-        android:layout_height="270dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/tv_Email"
-        android:layout_marginTop="20dp"
-
         android:layout_width="320dp"
         android:layout_height="230dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tv_Email"
-        android:layout_marginTop="3dp"
-
+        android:layout_marginTop="5dp"
         android:background="#FFFFFF" />
 
     <TextView
@@ -76,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:text="Classified as:"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -92,6 +95,7 @@
         android:textColor="#F44336"
         android:textSize="27sp"
         android:textStyle="bold" />
+
     <ImageView
         android:id="@+id/imgLogout"
         android:layout_width="wrap_content"
@@ -99,40 +103,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="8dp"
         android:src="@drawable/outline_logout_black_48" />
-    <ImageView
-        android:id="@+id/imgManage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="60dp"
-        android:src="@drawable/outline_manage_search_black_48" />
-
-    <TextView
-        android:id="@+id/tv_Email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Your email"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/imgPredict"
-        style="@style/Widget.Material3.Button.Icon"
-        android:layout_width="127dp"
-        android:layout_height="91dp"
-        android:layout_below="@id/recommend"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="76dp"
-        android:foregroundGravity="center_vertical|center|center_horizontal"
-        app:srcCompat="@android:drawable/ic_menu_help" />
 
     <ImageView
         android:id="@+id/imgManage"

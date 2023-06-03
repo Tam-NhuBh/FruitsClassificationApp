@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView camera, choose, recommend, imgManage;
     ImageView imageView;
     TextView result;
-    ImageView imgSignout, imgManage;
+    ImageView imgSignout;
     TextView tvEmail;
   
     @Override

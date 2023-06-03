@@ -44,9 +44,6 @@
 
             android:name="hcmute.edu.vn.fruitsclassificationapp.MainActivity"
             android:exported="false" />
-            android:name=".MainActivity"
-            android:exported="false"/>
-
 
         <activity
             android:name="hcmute.edu.vn.fruitsclassificationapp.activities.ClassifyActivity"
