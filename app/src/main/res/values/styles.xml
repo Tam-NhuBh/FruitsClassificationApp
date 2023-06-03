@@ -51,5 +51,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="AppTheme"></style>
+    <style name="AppTheme">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+    </style>
 </resources>

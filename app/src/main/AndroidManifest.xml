@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.hcmute.edu.vn.FruitsClassificationApp">
-    <uses-permission android:name="android.permission.CAMERA"/>
 
-
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -18,7 +16,16 @@
         android:theme="@style/Theme.FruitsClassificationApp"
         tools:targetApi="31">
         <activity
-            android:name=".Login"
+            android:name="hcmute.edu.vn.fruitsclassificationapp.RecommendOnlyActivity"
+            android:exported="false" />
+        <activity
+            android:name="hcmute.edu.vn.fruitsclassificationapp.AddActivity"
+            android:exported="false" />
+        <activity
+            android:name="hcmute.edu.vn.fruitsclassificationapp.RecommendActivity"
+            android:exported="false" />
+        <activity
+            android:name="hcmute.edu.vn.fruitsclassificationapp.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,17 +34,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Register"
+            android:name="hcmute.edu.vn.fruitsclassificationapp.Register"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false"/>
-
+            android:name="hcmute.edu.vn.fruitsclassificationapp.MainActivity"
+            android:exported="false" />
         <activity
-            android:name=".activities.ClassifyActivity"
-            android:exported="false">
-        </activity>
-
+            android:name="hcmute.edu.vn.fruitsclassificationapp.activities.ClassifyActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
