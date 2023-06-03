@@ -85,6 +85,8 @@
             android:backgroundTint="#03A9F4"
             android:fontFamily="sans-serif"
             android:text="@string/signup"
+            android:text="Sign Up"
+
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
 

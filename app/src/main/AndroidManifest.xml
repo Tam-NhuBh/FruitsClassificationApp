@@ -3,8 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.hcmute.edu.vn.FruitsClassificationApp">
 
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -37,8 +41,13 @@
             android:name="hcmute.edu.vn.fruitsclassificationapp.Register"
             android:exported="false" />
         <activity
+
             android:name="hcmute.edu.vn.fruitsclassificationapp.MainActivity"
             android:exported="false" />
+            android:name=".MainActivity"
+            android:exported="false"/>
+
+
         <activity
             android:name="hcmute.edu.vn.fruitsclassificationapp.activities.ClassifyActivity"
             android:exported="false" />

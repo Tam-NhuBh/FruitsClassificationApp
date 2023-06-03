@@ -21,10 +21,9 @@ import com.google.firebase.auth.FirebaseUser;
 import hcmute.edu.vn.fruitsclassificationapp.activities.ClassifyActivity;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView camera, choose, recommend;
+    ImageView camera, choose, recommend, imgManage;
     ImageView imageView;
     TextView result;
-
     ImageView imgSignout, imgManage;
     TextView tvEmail;
   
@@ -34,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-
 
         camera = findViewById(R.id.takePicture);
         choose = findViewById(R.id.choosePicture);
@@ -88,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
         imgManage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
