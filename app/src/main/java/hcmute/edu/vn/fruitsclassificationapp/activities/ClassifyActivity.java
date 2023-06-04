@@ -165,7 +165,7 @@ public class ClassifyActivity extends AppCompatActivity {
                                     else{
                                         int resultInt = Integer.parseInt(resultString);
                                         result.setText(labels[resultInt] + " ");
-                                    }
+                                        SystemStaticVariables.DetectedFruitName = labels[resultInt];                                    }
                                 } catch (JSONException e) {
                                     result.setText("Not Get");
                                 }
